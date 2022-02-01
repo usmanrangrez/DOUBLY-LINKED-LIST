@@ -52,9 +52,9 @@ void IAP()
     }
     
     new->next=ptr->next;
-    new->prev=ptr;
-    ptr->next=new;
     ptr->next->prev=new;
+    ptr->next=new;
+    new->prev=ptr;
     }  
 }
 
